@@ -122,6 +122,11 @@ public class CameraMovement : MonoBehaviour
     public float zoomDelay = 0.5f;
     private float zoomTimer = 0f;
 
+    private void Start()
+    {
+        wall0.SetActive(false);
+        wall3.SetActive(false);
+    }
     private void Update()
     {
         // Check if there are waypoints defined
@@ -137,7 +142,7 @@ public class CameraMovement : MonoBehaviour
             transform.LookAt(target.transform);
         }
 
-        Debug.Log(isMoving);
+        //Debug.Log(isMoving);
         
         HandleZoom();
 
