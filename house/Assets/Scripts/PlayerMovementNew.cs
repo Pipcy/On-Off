@@ -15,11 +15,11 @@ public class PlayerMovementNew : MonoBehaviour
     float turnSmoothVelocity;
 
     //For animation
-    Animator anim;
+    PlayerAnimStage anim;
 
     void Start()
     {
-        anim = GetComponent<Animator>();
+        anim = GetComponent<PlayerAnimStage>();
     }
 
     void Update()
@@ -28,7 +28,14 @@ public class PlayerMovementNew : MonoBehaviour
         float vertical = Input.GetAxisRaw("Vertical");
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
       
-
+        if (anim.sat)
+        {
+            speed = 0;
+        }
+        else
+        {
+            speed = 1.5f;
+        }
         if (direction.magnitude >= 0.1f)
         {
             //allow player to face the way they are moving
@@ -45,7 +52,10 @@ public class PlayerMovementNew : MonoBehaviour
         }
 
     }
+
+
 }
+
 
 
 //using System.Collections;

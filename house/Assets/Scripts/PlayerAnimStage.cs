@@ -14,6 +14,7 @@ public class PlayerAnimStage : MonoBehaviour
     public Transform targetLocation;
     public Quaternion targetRotation;
     public bool sitting;
+    public bool sat = false;
 
     //Interactive Object In Reach Booleans
     public bool sofaInReach = false;
@@ -41,26 +42,45 @@ public class PlayerAnimStage : MonoBehaviour
         anim.SetBool("walking", walking);
 
         //------------ Sitting --------------------------------
-        if (Input.GetMouseButton(0) && sofaInReach)
+
+        bool SofaTrigger = Input.GetKeyDown(KeyCode.E) && sofaInReach;
+        anim.SetBool("sitting", SofaTrigger && sat == false);
+
+        if (SofaTrigger)
         {
-            //anim.SetBool("sitting", Input.GetMouseButton(0) && sofaInReach);
-            StartCoroutine(SitOnSofa());
+            if(sat == false)
+            {
+                SitDown();
+            }
+            else if(sat == true)
+            {
+                GetUp();
+            }
         }
 
-        //anim.SetBool("sitting", Input.GetMouseButton(0) && sofaInReach);
+        void SitDown()
+        {
+            StartCoroutine(SitOnSofa());
+    
+            sat = true;
+            anim.SetBool("sat", sat);
+            
+        }
+
+        void GetUp()
+        {
+            anim.SetBool("sat", false);
+            sat = false;
+        }
 
          IEnumerator SitOnSofa()
         {
             if (walking)
                 yield break;
 
-            walking = true;
-            anim.SetBool("walking", true);
+
             yield return StartCoroutine(WalkToLocation(targetLocation.position));
             yield return StartCoroutine(TurnToRotation(targetRotation));
-            walking = false;
-            sitting = true;
-            anim.SetBool("sitting", true);
             
         }
 
@@ -97,5 +117,13 @@ public class PlayerAnimStage : MonoBehaviour
             sofaInReach = false;
         }
     }
-    
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("sofa"))
+        {
+            sofaInReach = false;
+        }
+    }
+
 }

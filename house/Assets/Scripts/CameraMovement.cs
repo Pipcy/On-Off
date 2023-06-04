@@ -58,34 +58,34 @@
 //        if (playerLoc.position.x > 0.5 && playerLoc.position.z > 0.5)
 //        {
 //            targetWaypointIndex = 3;
-//            wall0.SetActive(false);
-//            wall1.SetActive(true);
-//            wall2.SetActive(false);
-//            wall3.SetActive(true);
+//            wall0.enabled = false;
+//            wall1.enabled = true;
+//            wall2.enabled = false;
+//            wall3.enabled = true;
 //        }
 //        else if (playerLoc.position.x < -0.5 && playerLoc.position.z < -0.5)
 //        {
 //            targetWaypointIndex = 1;
-//            wall0.SetActive(true);
-//            wall1.SetActive(false);
-//            wall2.SetActive(true);
-//            wall3.SetActive(false);
+//            wall0.enabled = true;
+//            wall1.enabled = false;
+//            wall2.enabled = true;
+//            wall3.enabled = false;
 //        }
 //        else if (playerLoc.position.x < -0.5 && playerLoc.position.z > 0.5)
 //        {
 //            targetWaypointIndex = 2;
-//            wall0.SetActive(true);
-//            wall1.SetActive(false);
-//            wall2.SetActive(false);
-//            wall3.SetActive(true);
+//            wall0.enabled = true;
+//            wall1.enabled = false;
+//            wall2.enabled = false;
+//            wall3.enabled = true;
 //        }
 //        else if (playerLoc.position.x > 0.5 && playerLoc.position.z < -0.5)
 //        {
 //            targetWaypointIndex = 0;
-//            wall0.SetActive(false);
-//            wall1.SetActive(true);
-//            wall2.SetActive(true);
-//            wall3.SetActive(false);
+//            wall0.enabled = false;
+//            wall1.enabled = true;
+//            wall2.enabled = true;
+//            wall3.enabled = false;
 //        }
 
 
@@ -108,10 +108,10 @@ public class CameraMovement : MonoBehaviour
     private float point_cam_dis = 0f;
 
     public Transform playerLoc;
-    public GameObject wall0;
-    public GameObject wall1;
-    public GameObject wall2;
-    public GameObject wall3;
+    public MeshRenderer wall0;
+    public MeshRenderer wall1;
+    public MeshRenderer wall2;
+    public MeshRenderer wall3;
 
 
     //--------- camera zooming ------------
@@ -124,8 +124,8 @@ public class CameraMovement : MonoBehaviour
 
     private void Start()
     {
-        wall0.SetActive(false);
-        wall3.SetActive(false);
+        wall0.enabled = false;
+        wall3.enabled = false;
     }
     private void Update()
     {
@@ -171,44 +171,30 @@ public class CameraMovement : MonoBehaviour
                 isMoving = false;
             }
 
-            //// Check if the camera has reached the current waypoint
-            //if (Vector3.Distance(transform.position, currentWaypoint.position) <= 0.1f)
-            //{
-            //    // Check if the current waypoint is the target waypoint
-            //    if (currentWaypointIndex == targetWaypointIndex)
-            //    {
-            //        // Stop camera movement
-            //        isMoving = false;
-            //    }
-            //    else
-            //    {
-            //        // Move to the next waypoint
-            //        currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Length;
-            //    }
-            //}
+
         }
 
         if(point_cam_dis <= 3f )
         {
             if(targetWaypointIndex == 3)
             {
-                wall1.SetActive(true);
-                wall3.SetActive(true);
+                wall1.enabled = true;
+                wall3.enabled = true;
             }
             else if (targetWaypointIndex == 1)
             {
-                wall0.SetActive(true);
-                wall2.SetActive(true);
+                wall0.enabled = true;
+                wall2.enabled = true;
             }
             else if (targetWaypointIndex == 2)
             {
-                wall0.SetActive(true);
-                wall3.SetActive(true);
+                wall0.enabled = true;
+                wall3.enabled = true;
             }
             else if (targetWaypointIndex == 0)
             {
-                wall1.SetActive(true);
-                wall2.SetActive(true);
+                wall1.enabled = true;
+                wall2.enabled = true;
             }
         }
 
@@ -221,34 +207,34 @@ public class CameraMovement : MonoBehaviour
         if (playerLoc.position.x > 1 && playerLoc.position.z > 1)
         {
             targetWaypointIndex = 3;
-            wall0.SetActive(false);
-            //wall1.SetActive(true);
-            wall2.SetActive(false);
-            //wall3.SetActive(true);
+            wall0.enabled = false;
+            //wall1.enabled = true;
+            wall2.enabled = false;
+            //wall3.enabled = true;
         }
         else if (playerLoc.position.x < -1 && playerLoc.position.z < -1)
         {
             targetWaypointIndex = 1;
-            //wall0.SetActive(true);
-            wall1.SetActive(false);
-            //wall2.SetActive(true);
-            wall3.SetActive(false);
+            //wall0.enabled = true;
+            wall1.enabled = false;
+            //wall2.enabled = true;
+            wall3.enabled = false;
         }
         else if (playerLoc.position.x < -1 && playerLoc.position.z > 1)
         {
             targetWaypointIndex = 2;
-            //wall0.SetActive(true);
-            wall1.SetActive(false);
-            wall2.SetActive(false);
-            //wall3.SetActive(true);
+            //wall0.enabled = true;
+            wall1.enabled = false;
+            wall2.enabled = false;
+            //wall3.enabled = true;
         }
         else if (playerLoc.position.x > 1 && playerLoc.position.z < -1)
         {
             targetWaypointIndex = 0;
-            wall0.SetActive(false);
-            //wall1.SetActive(true);
-            //wall2.SetActive(true);
-            wall3.SetActive(false);
+            wall0.enabled = false;
+            //wall1.enabled = true;
+            //wall2.enabled = true;
+            wall3.enabled = false;
         }
     }
 
