@@ -49,12 +49,14 @@ public class DoorController : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         txtToDisplay.SetActive(true);
-        playerInZone = true;
+        if(other.CompareTag("Player"))
+            playerInZone = true;
     }
 
     private void OnTriggerExit(Collider other)
     {
-        playerInZone = false;
+        if (other.CompareTag("Player"))
+            playerInZone = false;
         txtToDisplay.SetActive(false);
     }
 
@@ -65,17 +67,17 @@ public class DoorController : MonoBehaviour
         {
             if (doorState == DoorState.Opened)
             {
-                txtToDisplay.GetComponent<Text>().text = "Press 'E' to Close";
+                //txtToDisplay.GetComponent<Text>().text = "Press 'E' to Close";
                 doorCollider.enabled = false;
             }
             else if (doorState == DoorState.Closed || gotKey)
             {
-                txtToDisplay.GetComponent<Text>().text = "Press 'E' to Open";
+                //txtToDisplay.GetComponent<Text>().text = "Press 'E' to Open";
                 doorCollider.enabled = true;
             }
             else if (doorState == DoorState.Jammed)
             {
-                txtToDisplay.GetComponent<Text>().text = "Needs Key";
+                //txtToDisplay.GetComponent<Text>().text = "Needs Key";
                 doorCollider.enabled = true;
             }
         }

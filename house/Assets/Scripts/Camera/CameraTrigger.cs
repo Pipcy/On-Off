@@ -286,8 +286,8 @@ public class CameraTrigger : MonoBehaviour
             }
             else if (currentWaypointIndex == 4)
             {
-                //ShowWalls(WallB1);
-                //ShowWalls(WallB2);
+                ShowWalls(WallB1);
+                ShowWalls(WallB2);
             }
 
         }
