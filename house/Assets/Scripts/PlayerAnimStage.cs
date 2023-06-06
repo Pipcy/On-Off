@@ -7,21 +7,26 @@ public class PlayerAnimStage : MonoBehaviour
     //For animation
     Animator anim;
 
+    [Header("General")]
+    public GameObject TriggerImage;
     //walking
+    [Header("Walking")]
     public bool walking;
 
     //sitting
+    [Header("Sofa")]
     public Transform targetLocation;
     public Quaternion targetRotation;
     public bool sitting;
     public bool sat = false;
-
-    //Interactive Object In Reach Booleans
     public bool sofaInReach = false;
+    
+
 
     void Start()
     {
         anim = GetComponent<Animator>();
+        TriggerImage.SetActive(false);
     }
 
     void Update()
@@ -103,7 +108,14 @@ public class PlayerAnimStage : MonoBehaviour
         }
 
         //-------------------------------------------------------------------------
-
+        if (sofaInReach)
+        {
+            TriggerImage.SetActive(true);
+        }
+        else
+        {
+            TriggerImage.SetActive(false);
+        }
     }
 
     void OnTriggerEnter(Collider other)
@@ -111,10 +123,12 @@ public class PlayerAnimStage : MonoBehaviour
         if (other.CompareTag("sofa"))
         {
             sofaInReach = true;
+            
         }
         else
         {
             sofaInReach = false;
+            
         }
     }
 

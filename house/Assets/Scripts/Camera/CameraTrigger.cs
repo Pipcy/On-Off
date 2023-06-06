@@ -244,13 +244,13 @@ public class CameraTrigger : MonoBehaviour
     {
         
         float point_cam_dis = Vector3.Distance(MainCam.transform.position, waypoints[currentWaypointIndex].position);
-        Debug.Log(point_cam_dis);// + "CurrentWaypointIndex: " + currentWaypointIndex);
+        //Debug.Log(point_cam_dis);// + "CurrentWaypointIndex: " + currentWaypointIndex);
         //Debug.Log("Cam Loc: " + MainCam.transform.position);
         //Debug.Log("WP: " + currentWaypointIndex +" WP LOC: " + waypoints[currentWaypointIndex].position);
 
         if (point_cam_dis <= 5f)
         {
-            Debug.Log("here");
+            //Debug.Log("here");
             if (currentWaypointIndex == 3)
             {
                 //wall1.enabled = true;
@@ -258,7 +258,7 @@ public class CameraTrigger : MonoBehaviour
                 //ShowThen(Wall1, Wall3);
                 ShowWalls(Wall1);
                 ShowWalls(Wall3);
-                Debug.Log("Done");
+                //Debug.Log("Done");
             }
             else if (currentWaypointIndex == 1)
             {
