@@ -1,20 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class Photo : MonoBehaviour
 {
     public GameObject Trigger;
+    public Image photo;
+    public TextMeshProUGUI hint;
+    public bool isTrash;
     public bool PlayerInReach = false;
     public bool On = false;
 
-    private Light lampLight;
+    
 
     void Start()
     {
         Trigger.SetActive(false);
-        lampLight = GetComponent<Light>();
-        lampLight.enabled = false;
+        photo.enabled = false;
+        hint.enabled = false;
     }
 
     // Update is called once per frame
@@ -25,13 +30,29 @@ public class Photo : MonoBehaviour
             if (On)
             {
                 On = false;
-                lampLight.enabled = false;
+                photo.enabled = false;
+                hint.enabled = false;
             }
             else if (On == false)
             {
+                
                 On = true;
-                lampLight.enabled = true;
+                photo.enabled = true;
+                if (isTrash)
+                {
+                    hint.enabled = true;
+                    hint.text = "Press U to clean up broken pieces.";
+                }
+
+
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.U) && isTrash)
+        {
+            hint.enabled = false;
+            photo.enabled = false;
+            gameObject.SetActive(false);
         }
 
     }

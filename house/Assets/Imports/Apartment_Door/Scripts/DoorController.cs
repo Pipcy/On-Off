@@ -1,15 +1,21 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class DoorController : MonoBehaviour
 {
     public bool keyNeeded = false;              //Is key needed for the door
     public bool gotKey;                  //Has the player acquired key
+    public AudioSource doorLockedAudio;
+    public AudioSource doorOpenAudio;
+    public AudioSource doorCloseAudio;
+
     public GameObject keyGameObject;            //If player has Key,  assign it here
-    public GameObject txtToDisplay;             //Display the information about how to close/open the door
+    public TextMeshProUGUI txtToDisplay;             //Display the information about how to close/open the door
 
     private bool playerInZone;                  //Check if the player is in the zone
     private bool doorOpened;                    //Check if door is currently opened or not
+
 
     private Animation doorAnim;
     private BoxCollider doorCollider;           //To enable the player to go through the door if door is opened else block him
@@ -33,7 +39,7 @@ public class DoorController : MonoBehaviour
         playerInZone = false;                   //Player not in zone
         doorState = DoorState.Closed;           //Starting state is door closed
 
-        txtToDisplay.SetActive(false);
+        txtToDisplay.enabled = false;
 
         doorAnim = transform.parent.gameObject.GetComponent<Animation>();
         doorCollider = transform.parent.gameObject.GetComponent<BoxCollider>();
@@ -48,7 +54,7 @@ public class DoorController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        txtToDisplay.SetActive(true);
+        txtToDisplay.enabled = true;
         if(other.CompareTag("Player"))
             playerInZone = true;
     }
@@ -57,7 +63,7 @@ public class DoorController : MonoBehaviour
     {
         if (other.CompareTag("Player"))
             playerInZone = false;
-        txtToDisplay.SetActive(false);
+        txtToDisplay.enabled = false;
     }
 
     private void Update()
@@ -67,18 +73,19 @@ public class DoorController : MonoBehaviour
         {
             if (doorState == DoorState.Opened)
             {
-                //txtToDisplay.GetComponent<Text>().text = "Press 'E' to Close";
+                txtToDisplay.text = "Press 'E' to Close";
                 doorCollider.enabled = false;
             }
             else if (doorState == DoorState.Closed || gotKey)
             {
-                //txtToDisplay.GetComponent<Text>().text = "Press 'E' to Open";
+                txtToDisplay.text = "Press 'E' to Open";
                 doorCollider.enabled = true;
             }
             else if (doorState == DoorState.Jammed)
             {
-                //txtToDisplay.GetComponent<Text>().text = "Needs Key";
+                txtToDisplay.text = "Needs Key";
                 doorCollider.enabled = true;
+                
             }
         }
 
@@ -92,12 +99,15 @@ public class DoorController : MonoBehaviour
                 {
                     doorAnim.Play("Door_Open");
                     doorState = DoorState.Opened;
+                    doorOpenAudio.Play();
                 }
                 else if (keyNeeded && !gotKey)
                 {
                     if (doorAnim.GetClip("Door_Jam") != null)
                         doorAnim.Play("Door_Jam");
                     doorState = DoorState.Jammed;
+                    doorLockedAudio.Play();
+                    //doorLockedAudio.PlayOneShot(doorLockedAudio.clip);
                 }
             }
 
@@ -105,12 +115,14 @@ public class DoorController : MonoBehaviour
             {
                 doorAnim.Play("Door_Open");
                 doorState = DoorState.Opened;
+                doorOpenAudio.Play();
             }
 
             if (doorState == DoorState.Opened && !doorAnim.isPlaying)
             {
                 doorAnim.Play("Door_Close");
                 doorState = DoorState.Closed;
+                doorCloseAudio.Play();
             }
 
             if (doorState == DoorState.Jammed && !gotKey)

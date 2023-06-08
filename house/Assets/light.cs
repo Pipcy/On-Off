@@ -8,6 +8,9 @@ public class light : MonoBehaviour
     public bool PlayerInReach = false;
     public bool On = false;
 
+    public AudioSource turnOn;
+    public AudioSource turnOff;
+
     private Light lampLight;
 
     void Start()
@@ -26,11 +29,13 @@ public class light : MonoBehaviour
             {
                 On = false;
                 lampLight.enabled = false;
+                turnOff.Play();
             }
             else if (On == false)
             {
                 On = true;
                 lampLight.enabled = true;
+                turnOn.Play();
             }
         }
 
