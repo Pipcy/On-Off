@@ -11,6 +11,8 @@ TagManager:
   - zoneC
   - zoneD
   - zoneE
+  - SnowGlobe
+  - ExitDoor
   layers:
   - Default
   - TransparentFX

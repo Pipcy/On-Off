@@ -149,6 +149,9 @@ public class CameraTrigger : MonoBehaviour
     public GameObject WallB2;//bathroom wall
     //private MeshRendererSwitcher MeshSwitch;
 
+    //-----
+    public bool inBathroom = false;
+
     private void Start()
     {
         //MeshSwitch = GetComponent<MeshRendererSwitcher>();
@@ -205,6 +208,7 @@ public class CameraTrigger : MonoBehaviour
         }
         else if (other.CompareTag("zoneE"))// bathroom
         {
+            inBathroom = true;
             Debug.Log("Player in Zone E");
             currentWaypointIndex = 4;
             CamSwitchTo(VCams[4]);
@@ -219,11 +223,22 @@ public class CameraTrigger : MonoBehaviour
 
         }
 
-        if (other.CompareTag("zoneE") != true)// bathroom
+        if (other.CompareTag("zoneA"))// bathroom
         {
+            inBathroom = false;
             HideWalls(WallB1);
             HideWalls(WallB2);
             
+        }
+
+        //special camera
+        if (other.CompareTag("SnowGlobe"))// snow globe
+        {
+            CamSwitchTo(VCams[5]);
+        }
+        else if(other.CompareTag("ExitDoor"))// exit door
+        {
+            CamSwitchTo(VCams[6]);
         }
     }
 
@@ -314,6 +329,18 @@ public class CameraTrigger : MonoBehaviour
     {
         Wall.GetComponent<MeshRenderer>().enabled = false;
         //MeshSwitch.DisableChildMeshRenderers(inactiveWall);
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("SnowGlobe"))// bathroom
+        {
+            CamSwitchTo(VCams[4]);
+        }
+        else if (other.CompareTag("ExitDoor"))// zone C
+        {
+            CamSwitchTo(VCams[2]);
+        }
     }
 
 
