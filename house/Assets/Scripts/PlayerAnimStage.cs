@@ -120,6 +120,7 @@ public class PlayerAnimStage : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        //Debug.Log(other);
         if (other.CompareTag("sofa"))
         {
             sofaInReach = true;

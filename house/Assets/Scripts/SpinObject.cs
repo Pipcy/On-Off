@@ -15,6 +15,11 @@ public class SpinObject : MonoBehaviour
         {
             Stop();
         }
+
+        if (SnowBlobeScript.broken)
+        {
+            gameObject.SetActive(false);
+        }
     }
     public void Spin()
     {

@@ -6,12 +6,16 @@ using TMPro;
 public class SnowGlobe : MonoBehaviour
 {
     public GameObject Trigger;
+    //public MeshRenderer GlobeMesh;
     public bool PlayerInReach = false;
     public bool On = false;
+    public bool turnedOnBefore = false;
+    public bool broken = false;
     public TextMeshProUGUI txtToDisplay;
 
     public AudioSource turnOn;
     public AudioSource turnOff;
+    public AudioSource GlassBreak;
 
     private Light lampLight;
 
@@ -21,12 +25,13 @@ public class SnowGlobe : MonoBehaviour
         lampLight = GetComponent<Light>();
         lampLight.enabled = false;
         txtToDisplay.enabled = false;
+        //GlobeMesh.enabled = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && PlayerInReach)
+        if (Input.GetKeyDown(KeyCode.E) && PlayerInReach && !broken)
         {
             if (On)
             {
@@ -39,6 +44,7 @@ public class SnowGlobe : MonoBehaviour
             }
             else if (On == false)
             {
+                turnedOnBefore = true;
                 On = true;
                 lampLight.enabled = true;
                 turnOn.Play();
@@ -57,7 +63,16 @@ public class SnowGlobe : MonoBehaviour
             PlayerInReach = true;
             Trigger.SetActive(true);
             txtToDisplay.enabled = true;
-            txtToDisplay.text = "Turn on snow globe";
+            if (broken)
+            {
+                txtToDisplay.text = "Snow Globe is missing!";
+                
+            }
+            else
+            {
+                txtToDisplay.text = "Turn on snow globe";
+            }
+                
         }
     }
 
@@ -70,5 +85,19 @@ public class SnowGlobe : MonoBehaviour
             Trigger.SetActive(false);
             txtToDisplay.enabled = false;
         }
+    }
+
+    public void Break()
+    {
+ 
+        if(broken == false)
+        {
+            GlassBreak.Play();
+        }
+        broken = true;
+        turnOn.Pause();
+        lampLight.enabled = false;
+        //GlobeMesh.enabled = false;
+        txtToDisplay.text = "Snow Globe is missing!";
     }
 }
