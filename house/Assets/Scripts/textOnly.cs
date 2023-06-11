@@ -12,10 +12,9 @@ public class textOnly : MonoBehaviour
     public string content2;
 
     public GameObject trigger;
-
     public AudioSource triggerAudio;
-
     public bool PlayerInReach = false;
+    public bool tried;
 
     void Start()
     {
@@ -31,6 +30,7 @@ public class textOnly : MonoBehaviour
             txt2.enabled = true;
             txt2.text = content2;
             triggerAudio.Play();
+            tried = true;
         }
     }
     private void OnTriggerEnter(Collider other)

@@ -7,6 +7,7 @@ public class light : MonoBehaviour
     public GameObject Trigger;
     public bool PlayerInReach = false;
     public bool On = false;
+    public bool turnedOn = false;
 
     public AudioSource turnOn;
     public AudioSource turnOff;
@@ -36,6 +37,7 @@ public class light : MonoBehaviour
                 On = true;
                 lampLight.enabled = true;
                 turnOn.Play();
+                turnedOn = true;
             }
         }
 

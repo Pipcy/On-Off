@@ -5,16 +5,22 @@ using UnityEngine;
 public class Radio : MonoBehaviour
 {
     public GameObject TriggerImage;
+    public GameObject screen = null;
     public bool PlayerInReach = false;
     public bool RadioOn = false;
+    public bool turnedOn = false;
+    public bool isTV;
 
     public AudioSource radioAudio;
+    public AudioSource turnOn;
+    public AudioSource turnOff;
 
     void Start()
     {
         TriggerImage.SetActive(false);
         radioAudio.Play();
         radioAudio.Pause();
+        screen.SetActive(false);
     }
 
     // Update is called once per frame
@@ -26,11 +32,20 @@ public class Radio : MonoBehaviour
             {
                 RadioOn = false;
                 radioAudio.Pause();
+                turnOff.Play();
+                if(isTV)
+                    screen.SetActive(false);
             }
             else if(RadioOn == false)
             {
+                turnedOn = true;
                 RadioOn = true;
+                
                 radioAudio.Play();
+                if(isTV)
+                    screen.SetActive(true);
+                turnOn.Play();
+                
             }
         }
 

@@ -7,18 +7,24 @@ using TMPro;
 public class Photo : MonoBehaviour
 {
     public GameObject Trigger;
-    public Image photo;
+    public Image[] photos;
     public TextMeshProUGUI hint;
-    public bool isTrash;
+    public bool isKey;
     public bool PlayerInReach = false;
     public bool On = false;
+    public bool picked = false;
+    public DoorController bathroomDoor;
 
     
 
     void Start()
     {
         Trigger.SetActive(false);
-        photo.enabled = false;
+        foreach(Image photo in photos)
+        {
+            photo.enabled = false;
+        }
+        
         hint.enabled = false;
     }
 
@@ -30,29 +36,41 @@ public class Photo : MonoBehaviour
             if (On)
             {
                 On = false;
-                photo.enabled = false;
+                foreach (Image photo in photos)
+                {
+                    photo.enabled = false;
+                }
                 hint.enabled = false;
             }
             else if (On == false)
             {
                 
                 On = true;
-                photo.enabled = true;
-                if (isTrash)
+                foreach (Image photo in photos)
+                {
+                    photo.enabled = true;
+                }
+                if (isKey)
                 {
                     hint.enabled = true;
-                    hint.text = "Press U to clean up broken pieces.";
+                    hint.text = "Press U to pick up bathroom key";
                 }
 
 
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.U) && isTrash)
+        if (Input.GetKeyDown(KeyCode.U) && isKey)
         {
+            picked = true;
             hint.enabled = false;
-            photo.enabled = false;
+            foreach (Image photo in photos)
+            {
+                photo.enabled = false;
+            }
             gameObject.SetActive(false);
+
+            bathroomDoor.gotKey = true;
         }
 
     }
