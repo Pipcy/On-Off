@@ -6,6 +6,7 @@ using TMPro;
 public class DoorBlockTrigger : MonoBehaviour
 {
     public TextMeshProUGUI hinttext;
+    public Timeline tl;
     
     void Start()
     {
@@ -17,8 +18,13 @@ public class DoorBlockTrigger : MonoBehaviour
         Debug.Log("player");
         if (other.CompareTag("Player"))
         {
-            hinttext.enabled = true;
             hinttext.text = "My shift have not ended yet, I must stay in the house.";
+            
+            if (!tl.timeIsUp)
+            {
+                hinttext.enabled = true;
+            }
+            
             
         }
     }

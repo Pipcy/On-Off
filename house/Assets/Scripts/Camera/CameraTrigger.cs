@@ -156,10 +156,10 @@ public class CameraTrigger : MonoBehaviour
     {
         //MeshSwitch = GetComponent<MeshRendererSwitcher>();
 
-        HideWalls(Wall1);
-        HideWalls(Wall2);
-        ShowWalls(Wall0);
-        ShowWalls(Wall3);
+        HideWalls(Wall0);
+        HideWalls(Wall3);
+        ShowWalls(Wall1);
+        ShowWalls(Wall2);
 
         HideWalls(WallB1);
         HideWalls(WallB2);
