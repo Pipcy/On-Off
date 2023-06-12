@@ -135,7 +135,7 @@ public class TaskPanel : MonoBehaviour
         
         if (musicPlayed)
         {
-            txt2.text = "<s>2. Play music from the antique music recorder.</s>";
+            txt2.text = "<s>2. Play music from the antique record player.</s>";
         }
         else
         {

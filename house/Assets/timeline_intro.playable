@@ -48,10 +48,10 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 3.066666666666667
+    m_Start: 2.3833333333333337
     m_ClipIn: 0
-    m_Asset: {fileID: -6722409524331176978}
-    m_Duration: 49.3
+    m_Asset: {fileID: 3008259901896502092}
+    m_Duration: 42.710204081632654
     m_TimeScale: 1
     m_ParentTrack: {fileID: -7842609711269682508}
     m_EaseInDuration: 0
@@ -115,7 +115,7 @@ MonoBehaviour:
     m_PreExtrapolationMode: 0
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
-    m_DisplayName: Coming_Home_2
+    m_DisplayName: Coming_Home_5
   m_Markers:
     m_Objects: []
   m_TrackProperties:
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 3.066666666666667
+    m_Start: 2.3833333333333337
     m_ClipIn: 0
     m_Asset: {fileID: 2500940936251315456}
     m_Duration: 1.5042198353912681
@@ -165,7 +165,7 @@ MonoBehaviour:
     m_ParentTrack: {fileID: -7496302602885802711}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: -1
+    m_BlendInDuration: 0
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
@@ -190,7 +190,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: SubtitleClip
   - m_Version: 1
-    m_Start: 4.570886502057938
+    m_Start: 3.8875531687246045
     m_ClipIn: 0
     m_Asset: {fileID: 2877424482776807159}
     m_Duration: 3.216666666666667
@@ -223,7 +223,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: SubtitleClip
   - m_Version: 1
-    m_Start: 7.787553168724601
+    m_Start: 7.104219835391268
     m_ClipIn: 0
     m_Asset: {fileID: -7931475064670211242}
     m_Duration: 2.452071165184801
@@ -274,7 +274,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: SubtitleClip
   - m_Version: 1
-    m_Start: 10.239624333909411
+    m_Start: 9.556291000576078
     m_ClipIn: 0
     m_Asset: {fileID: 8522291995934696561}
     m_Duration: 3.2927519192453474
@@ -343,7 +343,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: SubtitleClip
   - m_Version: 1
-    m_Start: 13.532376253154759
+    m_Start: 12.849042919821425
     m_ClipIn: 0
     m_Asset: {fileID: -1349498648214320054}
     m_Duration: 5.06762374684525
@@ -394,10 +394,10 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: SubtitleClip
   - m_Version: 1
-    m_Start: 18.599999999999998
+    m_Start: 17.916666666666664
     m_ClipIn: 0
     m_Asset: {fileID: 1604543142234476182}
-    m_Duration: 4.2333333333333325
+    m_Duration: 3.7500000000000036
     m_TimeScale: 1
     m_ParentTrack: {fileID: -7496302602885802711}
     m_EaseInDuration: 0
@@ -427,7 +427,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: SubtitleClip
   - m_Version: 1
-    m_Start: 22.833333333333332
+    m_Start: 21.666666666666668
     m_ClipIn: 0
     m_Asset: {fileID: -6747978484647482692}
     m_Duration: 3.6000000000000014
@@ -460,10 +460,10 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: SubtitleClip
   - m_Version: 1
-    m_Start: 26.433333333333334
+    m_Start: 25.26666666666667
     m_ClipIn: 0
     m_Asset: {fileID: -7690795294471049980}
-    m_Duration: 4.183333333333334
+    m_Duration: 4.666666666666664
     m_TimeScale: 1
     m_ParentTrack: {fileID: -7496302602885802711}
     m_EaseInDuration: 0
@@ -493,7 +493,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: SubtitleClip
   - m_Version: 1
-    m_Start: 30.616666666666678
+    m_Start: 29.933333333333344
     m_ClipIn: 0
     m_Asset: {fileID: 6443909975905549621}
     m_Duration: 1.8723654176108546
@@ -544,7 +544,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: SubtitleClip
   - m_Version: 1
-    m_Start: 32.48903208427757
+    m_Start: 31.805698750944234
     m_ClipIn: 0
     m_Asset: {fileID: -5424097853344286073}
     m_Duration: 4.183333333333334
@@ -577,7 +577,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: SubtitleClip
   - m_Version: 1
-    m_Start: 36.67236541761094
+    m_Start: 35.98903208427761
     m_ClipIn: 0
     m_Asset: {fileID: -5828439252290297450}
     m_Duration: 4.183333333333334
@@ -628,7 +628,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: SubtitleClip
   - m_Version: 1
-    m_Start: 40.85569875094428
+    m_Start: 40.17236541761095
     m_ClipIn: 0
     m_Asset: {fileID: -756265184548806789}
     m_Duration: 4.183333333333334
@@ -637,7 +637,7 @@ MonoBehaviour:
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
     m_BlendInDuration: -1
-    m_BlendOutDuration: -1
+    m_BlendOutDuration: 0
     m_MixInCurve:
       serializedVersion: 2
       m_Curve: []
@@ -646,25 +646,7 @@ MonoBehaviour:
       m_RotationOrder: 4
     m_MixOutCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -682,13 +664,13 @@ MonoBehaviour:
     m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: -1150490902622328640}
-    m_Duration: 3.066666666666667
+    m_Duration: 2.3833333333333355
     m_TimeScale: 1
     m_ParentTrack: {fileID: -7496302602885802711}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
     m_BlendInDuration: -1
-    m_BlendOutDuration: -1
+    m_BlendOutDuration: 0
     m_MixInCurve:
       serializedVersion: 2
       m_Curve:
@@ -730,7 +712,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: SubtitleClip
   - m_Version: 1
-    m_Start: 45.03903208427761
+    m_Start: 44.35569875094428
     m_ClipIn: 0
     m_Asset: {fileID: -8814623948607135397}
     m_Duration: 4.183333333333334
@@ -738,7 +720,7 @@ MonoBehaviour:
     m_ParentTrack: {fileID: -7496302602885802711}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: -1
+    m_BlendInDuration: 0
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
@@ -795,23 +777,6 @@ MonoBehaviour:
   m_Name: SubtitleClip(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
   subtitleText: ' I know this is your first time as a house sitter,'
---- !u!114 &-6722409524331176978
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f10dd60657c6004587f237a7e90f8e4, type: 3}
-  m_Name: AudioPlayableAsset
-  m_EditorClassIdentifier: 
-  m_Clip: {fileID: 8300000, guid: d06f723a2145b4a8e94ede5d36d00e6c, type: 3}
-  m_Loop: 0
-  m_bufferingTime: 0.1
-  m_ClipProperties:
-    volume: 1
 --- !u!114 &-5828439252290297450
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -939,6 +904,23 @@ MonoBehaviour:
   m_Name: SubtitleClip(Clone)
   m_EditorClassIdentifier: 
   subtitleText: Hey there sweetheart, this is Nancy Hopkins speaking.
+--- !u!114 &3008259901896502092
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f10dd60657c6004587f237a7e90f8e4, type: 3}
+  m_Name: AudioPlayableAsset
+  m_EditorClassIdentifier: 
+  m_Clip: {fileID: 8300000, guid: 022caf004484f409a91ea275cdd09509, type: 3}
+  m_Loop: 0
+  m_bufferingTime: 0.1
+  m_ClipProperties:
+    volume: 1
 --- !u!114 &6443909975905549621
 MonoBehaviour:
   m_ObjectHideFlags: 1

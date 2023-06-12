@@ -369,7 +369,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: VFX help from sahilsenvisually
+  m_text: Press Space key to go back to the main menu.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 79733602d37d547e387b21d6569edb86, type: 2}
   m_sharedMaterial: {fileID: 1351034007657901787, guid: 79733602d37d547e387b21d6569edb86, type: 2}
@@ -1464,8 +1464,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Trigger: {fileID: 397209066}
   photos:
-  - {fileID: 0}
-  hint: {fileID: 0}
+  - {fileID: 1347609053}
+  hint: {fileID: 13289197}
   isKey: 1
   PlayerInReach: 0
   On: 0
@@ -2220,7 +2220,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh262808
+  m_Name: pb_Mesh589774
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2856,7 +2856,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &248049925
 Transform:
   m_ObjectHideFlags: 0
@@ -5418,7 +5418,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh262906
+  m_Name: pb_Mesh589886
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11219,6 +11219,7 @@ PlayableDirector:
     - 15d7198b657fe4dc4b9a8e83833cfc5a: {fileID: 1680137375}
     - 2a29734d447aa410db5e5a424428a6ef: {fileID: 1106725885}
     - adf889bf012764d94a0273213b4ae12c: {fileID: 1295114816}
+    - 828cf60a728384de093c321bc4dd63f4: {fileID: 1240131805}
     - 9dcb2402478ae4e15b6d5f8c1e75e228: {fileID: 891605820}
 --- !u!1 &953696663 stripped
 GameObject:
@@ -11602,7 +11603,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh263622
+  m_Name: pb_Mesh590602
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12592,7 +12593,7 @@ PrefabInstance:
     - target: {fileID: 8160725675885458173, guid: 39868262e399a4c48bf3739708613d2b, type: 3}
       propertyPath: txtToDisplay
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 13289197}
     - target: {fileID: 8160725675885458173, guid: 39868262e399a4c48bf3739708613d2b, type: 3}
       propertyPath: doorOpenAudio
       value: 
@@ -12600,7 +12601,7 @@ PrefabInstance:
     - target: {fileID: 8160725675885458173, guid: 39868262e399a4c48bf3739708613d2b, type: 3}
       propertyPath: keyGameObject
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1745463698}
     - target: {fileID: 8160725675885458173, guid: 39868262e399a4c48bf3739708613d2b, type: 3}
       propertyPath: doorCloseAudio
       value: 
@@ -15199,6 +15200,82 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10a6bc1f9fa8e1545a0996baaa9c5040, type: 3}
+--- !u!1 &1347609051
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1347609052}
+  - component: {fileID: 1347609054}
+  - component: {fileID: 1347609053}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1347609052
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347609051}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1942053922}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1347609053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347609051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1347609054
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347609051}
+  m_CullTransparentMesh: 1
 --- !u!1 &1366861559
 GameObject:
   m_ObjectHideFlags: 0
@@ -18542,7 +18619,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh263544
+  m_Name: pb_Mesh590530
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -20217,6 +20294,10 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: -0.22843733
       objectReference: {fileID: 0}
+    - target: {fileID: 8130067943752055159, guid: 39868262e399a4c48bf3739708613d2b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8130921515360841392, guid: 39868262e399a4c48bf3739708613d2b, type: 3}
       propertyPath: m_Name
       value: Bathroom_Door
@@ -20999,7 +21080,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh263948
+  m_Name: pb_Mesh590900
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -21847,7 +21928,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1883541691
 Transform:
   m_ObjectHideFlags: 0
@@ -21937,7 +22018,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 668c5351ca054485dba02e652ce179c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  txt: {fileID: 0}
+  txt: {fileID: 13289197}
   content: Press E to lay down
   txt2: {fileID: 499150379}
   content2: It's kinda rude to sleep on someone else's bed.
@@ -21964,7 +22045,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh263098
+  m_Name: pb_Mesh590068
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -22383,7 +22464,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1347609052}
   m_Father: {fileID: 220272883}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -22473,7 +22555,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1942372712}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f820a1c23e9f344cfb1c3241e43b51fa, type: 3}
   m_Name: 
@@ -22912,7 +22994,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1982130380}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff2edd80e98aa4357988896b7cd406fb, type: 3}
   m_Name: 
@@ -22971,7 +23053,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 580663917f3854a929430489e7b10df6, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.264
+  m_Volume: 0.98
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -23072,7 +23154,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2004709205
 Transform:
   m_ObjectHideFlags: 0
@@ -24719,7 +24801,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh263388
+  m_Name: pb_Mesh590340
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
