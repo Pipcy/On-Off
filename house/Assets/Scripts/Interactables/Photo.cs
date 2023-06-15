@@ -92,6 +92,13 @@ public class Photo : MonoBehaviour
             //show trigger Image
             PlayerInReach = false;
             Trigger.SetActive(false);
+
+            On = false;
+            foreach (Image photo in photos)
+            {
+                photo.enabled = false;
+            }
+            hint.enabled = false;
         }
     }
 }

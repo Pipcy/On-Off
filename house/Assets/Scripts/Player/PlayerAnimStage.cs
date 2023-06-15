@@ -20,6 +20,7 @@ public class PlayerAnimStage : MonoBehaviour
     public bool sitting;
     public bool sat = false;
     public bool sofaInReach = false;
+    //public Rigidbody Player;
     
 
 
@@ -69,7 +70,8 @@ public class PlayerAnimStage : MonoBehaviour
     
             sat = true;
             anim.SetBool("sat", sat);
-            
+            //Player.constraints = RigidbodyConstraints.FreezeRotation;
+
         }
 
         void GetUp()

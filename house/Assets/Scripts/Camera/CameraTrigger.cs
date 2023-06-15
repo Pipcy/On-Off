@@ -268,34 +268,21 @@ public class CameraTrigger : MonoBehaviour
             //Debug.Log("here");
             if (currentWaypointIndex == 3)
             {
-                //wall1.enabled = true;
-                //wall3.enabled = true;
-                //ShowThen(Wall1, Wall3);
                 ShowWalls(Wall1);
                 ShowWalls(Wall3);
-                //Debug.Log("Done");
             }
             else if (currentWaypointIndex == 1)
             {
-                //wall0.enabled = true;
-                //wall2.enabled = true;
                 ShowWalls(Wall0);
                 ShowWalls(Wall2);
-                //ShowThen(Wall0, Wall2);
             }
             else if (currentWaypointIndex == 2)
             {
-                //wall0.enabled = true;
-                //wall3.enabled = true;
-                //ShowThen(Wall1, Wall2);
                 ShowWalls(Wall1);
                 ShowWalls(Wall2);
             }
             else if (currentWaypointIndex == 0)
             {
-                //wall1.enabled = true;
-                //wall2.enabled = true;
-                //ShowThen(Wall0, Wall3);
                 ShowWalls(Wall0);
                 ShowWalls(Wall3);
             }
@@ -307,17 +294,6 @@ public class CameraTrigger : MonoBehaviour
 
         }
     }
-
-    //void ShowThen(params GameObject[] walls)
-    //{
-    //    if (cinemachineBrain.IsBlending == false)
-    //    {
-    //        foreach (GameObject wall in walls)
-    //        {
-    //            ShowWalls(wall);
-    //        }
-    //    }
-    //}
 
     void ShowWalls(GameObject Wall)
     {
